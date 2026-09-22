@@ -9,7 +9,7 @@ log using "analysis_log.log", replace text
 *-------------------------------------------------------------------------
 * 1. Data import and preparation
 *-------------------------------------------------------------------------
-import delimited "hssc_ai_university_panel_data.csv", clear varnames(1)
+import delimited "data.csv", clear varnames(1)
 
 label variable univ_id     "University identifier"
 label variable year        "Survey year"
@@ -210,4 +210,5 @@ estimates table m2 fe1 re1 lag_model, star(0.1 0.05 0.01) stats(N r2) ///
     title("Main and robustness estimates")
 
 log close
+
 
