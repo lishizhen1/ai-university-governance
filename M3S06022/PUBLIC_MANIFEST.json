@@ -169,8 +169,8 @@
     },
     {
       "path": "audit_analysis/source_definitions/02_可复现代码/README.md",
-      "bytes": 5485,
-      "sha256": "c43d4ef42e75a9959b0f881bf9fa8ab130ed055487f5e24324b3115d7fc80550"
+      "bytes": 5344,
+      "sha256": "f0d820e690b066e8754a2caa3e79b0a4fa3a8108dd5c831045b3b17c9ede7038"
     },
     {
       "path": "audit_analysis/source_definitions/02_可复现代码/requirements.txt",
@@ -214,8 +214,8 @@
     },
     {
       "path": "figures/make_revision_figures.py",
-      "bytes": 18459,
-      "sha256": "47c6fa1c26396756eb22952556f3f23e1aa9f084bedbcb2dc04596ce768ade63"
+      "bytes": 18181,
+      "sha256": "abd5c4f298cd5602e6eb767b3fb99af7c295d52c4e70ad2e00ced341e5a7d269"
     },
     {
       "path": "PUBLIC_EXPORT_NOTES.md",
