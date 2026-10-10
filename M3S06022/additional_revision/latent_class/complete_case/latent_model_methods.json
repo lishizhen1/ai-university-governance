@@ -1,0 +1,39 @@
+{
+  "R": "4.6.1",
+  "lcmm": "2.2.2",
+  "data_variant": "complete",
+  "model": "Gaussian latent class linear mixed model: SIC ~ time; class-specific intercept and time slope; subject random intercept; common random-intercept variance and residual variance; constant class probabilities.",
+  "fixed": "sic ~ time",
+  "mixture": "~ time",
+  "random": "~ 1",
+  "classmb": "~ 1",
+  "time_unit": "W1=0,W2=1,W3=2; one step = 24 hours",
+  "candidate_classes": [1, 2, 3, 4],
+  "missingness": "Only admissions with all three SIC measurements observed before any carry/imputation are included. Complete-case selection may be informative; comparison with full-cohort results changes the analysis population.",
+  "initialization": "For each K>1, 40 seeded random initialisations from the K1 model, each up to 30 iterations; six highest short-run likelihood candidates fully refitted to maxiter=1000. All convergence thresholds 1e-5; only conv=1 models used.",
+  "class_selection": "Minimum BIC among converged K1-K4 models, supported by AIC, likelihood repetition, class sizes and posterior quality; no mortality endpoint used.",
+  "covariance_diagnostics": "Eigenvalue and condition summaries refer to lcmm parameter covariance on its internal scale, including Cholesky-transformed variance parameters; they are not the random-effects covariance matrix condition number.",
+  "external": "Frozen MIMIC model posterior allocation to observed eICU SIC values, reported descriptively. No external re-selection, model refitting or mortality predictive validation. eICU admissions include repeated persons.",
+  "limitations": ["SIC is bounded and ordered from 0 to 6; Gaussian likelihood is a continuous approximation and latent classes may approximate a non-Gaussian distribution.", "Only three 24-hour windows are available; no higher-order trajectory is estimated.", "Complete-case inclusion may select a systematically different observation/severity population.", "The model does not establish biological phenotypes or treatment-response subgroups.", "If K4 has lowest BIC this only means best of tested K1-K4; it does not identify a globally optimal number of classes."],
+  "sources": [
+    {
+      "title": "Estimation of Extended Mixed Models Using Latent Classes and Latent Processes: The R Package lcmm",
+      "authors": "Proust-Lima C, Philipps V, Liquet B",
+      "year": 2017,
+      "doi": "10.18637/jss.v078.i02",
+      "url": "https://www.jstatsoft.org/article/view/v078i02"
+    },
+    {
+      "title": "Official hlme documentation",
+      "url": "https://cecileproust-lima.github.io/lcmm/reference/hlme.html"
+    },
+    {
+      "title": "Official gridsearch documentation",
+      "url": "https://cecileproust-lima.github.io/lcmm/reference/gridsearch.html"
+    },
+    {
+      "title": "Official summarytable/summaryplot criteria",
+      "url": "https://cecileproust-lima.github.io/lcmm/reference/summaryplot.html"
+    }
+  ]
+}

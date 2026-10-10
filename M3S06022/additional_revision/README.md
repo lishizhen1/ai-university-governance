@@ -1,0 +1,42 @@
+# Additional reviewer-requested analyses
+
+This v2 addition contains source code, fixed methods, environment records and aggregate reference results for integrated calibration error and a formal longitudinal latent-class sensitivity. No participant records, predictions, posterior assignments, pretrained models, fitted coefficients, class centers or fitted trajectory parameters are distributed.
+
+## What was added
+
+- ICI, E50 and E90 for 13 frozen models in each cohort; 500 paired bootstrap draws per cohort (13,000 aggregate metric rows), with 72 paired metric contrasts.
+- Gaussian latent-class linear mixed models (lcmm::hlme), K=1–4, using observed SIC values and a separate complete-three-window sensitivity. Each K>1 used 40 random starts and six full restarts. Eight selected models converged. Models were used for descriptive posterior allocation in eICU, not mortality-prediction validation.
+- Independent numerical checks and the original execution audit, including the recovered end-of-script error documented in `latent_class/execution_validation.json`.
+
+ICI intervals condition on existing predictions: smoother-estimation uncertainty is included, while complete prediction-model development and between-hospital uncertainty are not. See [ICI methods](ICI_METHODS.md).
+
+K4 had the lowest BIC among K1–K4 in both latent-class analyses. This does not establish an optimal unrestricted class count, biological phenotypes, or the original multivariable K-means labels. In the observed-value analysis the smallest assigned class comprised 2.69% of MIMIC and 1.61% of eICU; 44.82% and 54.03%, respectively, had maximum posterior probability below 0.8. The continuous Gaussian approximation to bounded, ordered SIC, three-window observation, uncertain MAR assumption, and complete-case selection limit interpretation. See `latent_class/LATENT_METHODS_RESULTS.txt`.
+
+## Reproduce the calculation using authorized local data
+
+Run from the M3S06022 repository directory. First complete [the principal reproduction workflow](../audit_analysis/REPRODUCTION_README.md), including `freeze_snapshot.py`. That produces the private `audit_analysis/FINAL_SNAPSHOT.json`, prediction files and model files required by the additional scripts. `SIC_DATA_ROOT` must point to authorized source data. The public checkout alone cannot recreate patient-level analyses. Use a private working copy: reruns overwrite the supplied aggregate reference files with newly computed results.
+
+1. Install Python requirements with `python -m pip install -r requirements_all.txt` in a private virtual environment. The reference versions are in `ici_environment.json`.
+2. Run `python additional_revision/ici_analysis.py --bootstrap 500`, followed by `python additional_revision/verify_ici.py`. The optional Figure 2 agreement check runs only when the locally generated curve source exists. Primary predictions are not refitted by these scripts.
+3. Run `python additional_revision/latent_class/export_latent_input.py`. This writes restricted longitudinal records and mappings into `private_local_only/`; do not commit them.
+4. Provide R 4.6.1 with lcmm 2.2.2 and jsonlite 2.0.0 in an R library visible to both Rscript and its parallel workers. `R_SESSION_INFO.txt` records the complete reference environment. The repository does not install R or these dependencies. Current CRAN installation may resolve newer versions, so use matching archived packages or a separately pinned local R environment when exact-version reproduction is needed. No cross-platform bit-for-bit identity is claimed.
+5. Run the commands below in sequence after setting `ROOT` to the local `additional_revision/latent_class` directory. A short ASCII-only local path is recommended on Windows; the reference R runtime could not start reliably under its deep non-ASCII installation path.
+
+```text
+Rscript additional_revision/latent_class/fit_latent_trajectories.R ROOT full 40 observed
+Rscript additional_revision/latent_class/fit_latent_trajectories.R ROOT full 40 complete
+Rscript additional_revision/latent_class/summarize_latent_trajectories.R ROOT observed
+Rscript additional_revision/latent_class/summarize_latent_trajectories.R ROOT complete
+Rscript additional_revision/latent_class/validate_saved_models.R ROOT
+python additional_revision/latent_class/finalize_latent_report.py
+```
+
+`ROOT` above is a placeholder for the actual local path, not a shell variable automatically created by these commands. The two fit variants use four workers each. Do not run the same variant twice concurrently or edit a script while it is executing. Each variant writes models and individual posteriors under its own ignored `private_local_only/` directory.
+
+The original execution notes are historical audit records. The independent validation reloads eight saved models, checks data/order and convergence, recomputes likelihoods/posteriors at fixed saved parameters, and verifies 36 full restarts. These checks require the private models generated by a local reproduction; none is downloadable here. The validation is not a new independent-data model evaluation.
+
+## Check the public summaries without clinical data
+
+Run `python additional_revision/verify_public_summaries.py`. It uses only the published aggregate tables to reconstruct ICI intervals/paired contrasts, latent-model AIC/BIC, class totals and weighted posterior-quality summaries. It does not refit models and cannot replace authorized patient-level reproduction.
+
+`SOURCE_PROVENANCE.json` records original source hashes and the packaging-only edits to relative paths and historical status wording. `../PUBLIC_MANIFEST.json` identifies the public files after LF normalization. Private model and patient-input hashes are excluded from these public audit copies; original provenance remains local. Audit records describe the original execution, while a fresh run generates its own source and output hashes. Restricted model-sharing preparation is separate and is not part of this public export.

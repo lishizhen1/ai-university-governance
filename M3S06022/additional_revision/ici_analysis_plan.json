@@ -1,0 +1,101 @@
+{
+  "analysis": "Additional ICI/E50/E90 for frozen primary predictions",
+  "definition": "ICI=mean(abs(c_hat(p_i)-p_i)); E50 and E90 are empirical quantiles of the same absolute deviations; lower is better.",
+  "reference": {
+    "authors": [
+      "Peter C. Austin",
+      "Ewout W. Steyerberg"
+    ],
+    "title": "The Integrated Calibration Index (ICI) and related metrics for quantifying the calibration of logistic regression models",
+    "journal": "Statistics in Medicine",
+    "year": 2019,
+    "volume": 38,
+    "issue": 21,
+    "pages": "4051–4065",
+    "doi": "10.1002/sim.8281",
+    "pmid": "31270850",
+    "primary_url": "https://onlinelibrary.wiley.com/doi/full/10.1002/sim.8281",
+    "semantic_scholar_paper_id": "dd4bb722ff1661942c64d0c6e62fa3d9fe526a40"
+  },
+  "estimator_fixed_before_reading_results": {
+    "predictor": "logit(p), clipped to [1e-6,1−1e-6] only for transform",
+    "SplineTransformer": {
+      "n_knots": 4,
+      "degree": 3,
+      "knots": "quantile",
+      "include_bias": false
+    },
+    "LogisticRegression": {
+      "C": 1,
+      "max_iter": 2000,
+      "solver": "lbfgs",
+      "tol": 0.0001
+    },
+    "selection": "Exact pre-existing Figure 2 specification; no result-dependent selection."
+  },
+  "evaluation": "All observed prediction values; equal weight per ICU admission; no trimming to the 1st–99th plotting interval, no uniform-grid averaging, and no modification of frozen predictions.",
+  "quantile_method": "numpy linear interpolation for E50/E90 and percentile confidence intervals",
+  "bootstrap": {
+    "replicates": 500,
+    "seed": 20261010,
+    "MIMIC-IV": "sample n independent first-stay people with replacement",
+    "eICU": "sample unique people with replacement and carry all included stays each time",
+    "calibrator": "Refit quantile knots, spline and logistic coefficients in every bootstrap sample; assess at the resampled observed predictions.",
+    "pairing": "Identical bootstrap draw for all 13 models within cohort",
+    "CI": "2.5th and97.5th percentile; no bootstrap replicate silently discarded",
+    "conditional_limitation": "Original risk model fitting/tuning and OOF generation are not repeated. Smoother-estimation uncertainty is included; model-development uncertainty and eICU between-hospital heterogeneity are not fully included."
+  },
+  "distinction_from_original_paper": "Original paper illustrated loess and restricted cubic splines, and used a derivation+validation bootstrap refitting the risk model. Here a fixed logistic B-spline estimator is used for consistency with our existing plot, and intervals explicitly condition on the risk predictions.",
+  "numerical_boundary_policy": "Single outcome class or constant prediction: constant empirical event-rate curve. Duplicated quantile knots with varying predictions: four equally spaced logit knots. Neither policy depends on observed ICI; frequency is reported. Original risk p is retained in absolute-error calculation.",
+  "model_pairs": [
+    [
+      "M2_admission_SIC",
+      "M1_admission_SOFA"
+    ],
+    [
+      "M3_continuous_SIC",
+      "M2_admission_SIC"
+    ],
+    [
+      "M3_continuous_SIC",
+      "Peak_SOFA"
+    ],
+    [
+      "Peak_SOFA_plus_SIC",
+      "Peak_SOFA"
+    ],
+    [
+      "Coagulation_only_serial",
+      "M3_continuous_SIC"
+    ],
+    [
+      "Serial_SOFA",
+      "M3_continuous_SIC"
+    ],
+    [
+      "M3_plus_K2",
+      "M3_continuous_SIC"
+    ],
+    [
+      "M3_plus_K4_exploratory",
+      "M3_continuous_SIC"
+    ],
+    [
+      "Expanded_LR",
+      "M3_continuous_SIC"
+    ],
+    [
+      "Expanded_XGB",
+      "Expanded_LR"
+    ],
+    [
+      "M3_missing_indicators",
+      "M3_continuous_SIC"
+    ],
+    [
+      "M3_continuous_SIC",
+      "M3_level_only"
+    ]
+  ],
+  "claims": "Post hoc descriptive addition; intervals unadjusted for multiplicity; no clinical-calibration threshold or deployment claim."
+}

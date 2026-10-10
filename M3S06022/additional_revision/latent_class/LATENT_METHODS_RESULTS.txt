@@ -1,0 +1,25 @@
+Formal Gaussian latent class linear mixed models were fitted in R 4.6.1 using lcmm 2.2.2 (hlme), with SIC as the longitudinal response and time coded 0, 1 and 2 for W1-W3. Each class had an intercept and linear time slope; a subject random intercept and residual variance were shared across classes. Class probabilities had intercepts only. Candidate K=1-4 models were evaluated without loading mortality outcomes. Each K>1 used 40 seeded random starts from the one-class model (up to 30 iterations); the six highest short-run likelihoods were refitted to at most 1,000 iterations. Parameter, likelihood and derivative convergence tolerances were all 1e-5; only full convergence (conv=1) was accepted for model comparison. BIC used subjects as the sample size. Posterior assignments used maximum probability; neutral labels were sorted by fitted W1 level. The complete-three-window subset repeated the same specification and search. Frozen derivation models were applied to observed eICU SIC values for descriptive posterior allocation, not mortality-prediction validation.
+
+OBSERVED DATA: BIC comparison among converged tested K=1-4 models; no mortality outcome used.
+K=1: n=10810, observations=27105, loglik=-41940.287474, AIC=83888.575, BIC=83917.728, conv=1; best LL repeated in 1/1 fully converged refits (tolerance 1e-4).
+K=2: n=10810, observations=27105, loglik=-41476.259384, AIC=82966.519, BIC=83017.536, conv=1; best LL repeated in 6/6 fully converged refits (tolerance 1e-4).
+K=3: n=10810, observations=27105, loglik=-41207.665684, AIC=82435.331, BIC=82508.214, conv=1; best LL repeated in 6/6 fully converged refits (tolerance 1e-4).
+K=4: n=10810, observations=27105, loglik=-41037.650778, AIC=82101.302, BIC=82196.049, conv=1; best LL repeated in 6/6 fully converged refits (tolerance 1e-4).
+Lowest BIC among valid tested models: K=4. This is not a globally optimal class-count claim.
+MIMIC-IV, K=4: n=10810, entropy=0.6191, mean maximum posterior=0.7919, maximum posterior <0.8 in 44.82%; smallest assigned class=291 (2.69%).
+Assigned class sizes: C1=291 (2.69%, APP 0.7296), C2=5238 (48.46%, APP 0.8253), C3=1208 (11.17%, APP 0.7285), C4=4073 (37.68%, APP 0.7721).
+eICU, K=4: n=4355, entropy=0.5333, mean maximum posterior=0.7403, maximum posterior <0.8 in 54.03%; smallest assigned class=70 (1.61%).
+Assigned class sizes: C1=70 (1.61%, APP 0.7208), C2=1834 (42.11%, APP 0.7952), C3=204 (4.68%, APP 0.6926), C4=2247 (51.60%, APP 0.7004).
+
+COMPLETE DATA: BIC comparison among converged tested K=1-4 models; no mortality outcome used.
+K=1: n=6826, observations=20478, loglik=-30776.079873, AIC=61560.160, BIC=61587.474, conv=1; best LL repeated in 1/1 fully converged refits (tolerance 1e-4).
+K=2: n=6826, observations=20478, loglik=-30324.422854, AIC=60662.846, BIC=60710.645, conv=1; best LL repeated in 6/6 fully converged refits (tolerance 1e-4).
+K=3: n=6826, observations=20478, loglik=-30153.776509, AIC=60327.553, BIC=60395.838, conv=1; best LL repeated in 6/6 fully converged refits (tolerance 1e-4).
+K=4: n=6826, observations=20478, loglik=-30011.076513, AIC=60048.153, BIC=60136.923, conv=1; best LL repeated in 6/6 fully converged refits (tolerance 1e-4).
+Lowest BIC among valid tested models: K=4. This is not a globally optimal class-count claim.
+MIMIC-IV, K=4: n=6826, entropy=0.6456, mean maximum posterior=0.8034, maximum posterior <0.8 in 46.31%; smallest assigned class=210 (3.08%).
+Assigned class sizes: C1=210 (3.08%, APP 0.7615), C2=2542 (37.24%, APP 0.8114), C3=1044 (15.29%, APP 0.7688), C4=3030 (44.39%, APP 0.8115).
+eICU, K=4: n=1535, entropy=0.6300, mean maximum posterior=0.7862, maximum posterior <0.8 in 51.47%; smallest assigned class=34 (2.21%).
+Assigned class sizes: C1=34 (2.21%, APP 0.7864), C2=357 (23.26%, APP 0.7412), C3=159 (10.36%, APP 0.7460), C4=985 (64.17%, APP 0.8090).
+
+SIC is an ordered, bounded 0-6 score, whereas hlme uses a Gaussian continuous approximation. Classes can approximate distributional non-normality rather than distinct biological populations. Three windows support only the specified short linear trajectories. The full observed-data analysis included 1,341 MIMIC admissions with one observed SIC value (12.4%); these inform level but not individual change. Observed-value likelihood requires an unverified missing-at-random assumption. The complete-case analysis selects a different observation population and cannot eliminate informative missingness. eICU posterior allocation is descriptive and includes repeated admissions from some persons. This univariate SIC model differs from the original multivariable K-means feature space and does not reproduce or validate its K4 labels. A BIC minimum at K4 means best among K1-K4 candidates, not proof that four classes are globally optimal, biologically real or treatment-relevant. All patient-level records and fitted model parameters remain local and restricted; this public export contains only source code and aggregate reporting.

@@ -1,0 +1,88 @@
+{
+  "cohort_source": "Frozen revision_analysis.load_data, harmonized SIC and final eligibility",
+  "no_outcome_columns_exported": true,
+  "time_unit": "24-hour window step; W1=0,W2=1,W3=2",
+  "missingness": "Only observed pre-carry-forward SIC values contribute; no carried or imputed SIC is used.",
+  "privacy": "Inputs, subject posteriors and fitted models remain restricted local files; no publication is authorized.",
+  "mimic": {
+    "subjects": 10810,
+    "observed_measurements": 27105,
+    "complete_subjects": 6826,
+    "measurement_count_distribution": {
+      "1": 1341,
+      "2": 2643,
+      "3": 6826
+    },
+    "unique_source_persons": 10810,
+    "by_time": [
+      {
+        "time": 0,
+        "count": 10810,
+        "mean": 3.689824236817761,
+        "std": 1.429988890529452
+      },
+      {
+        "time": 1,
+        "count": 8394,
+        "mean": 3.6371217536335476,
+        "std": 1.5019219134958308
+      },
+      {
+        "time": 2,
+        "count": 7901,
+        "mean": 3.4886723199594987,
+        "std": 1.5468316401982913
+      }
+    ],
+    "score_counts": {
+      "0.0": 373,
+      "1.0": 1237,
+      "2.0": 5543,
+      "3.0": 5618,
+      "4.0": 6761,
+      "5.0": 3678,
+      "6.0": 3895
+    }
+  },
+  "eicu": {
+    "subjects": 4355,
+    "observed_measurements": 8338,
+    "complete_subjects": 1535,
+    "measurement_count_distribution": {
+      "1": 1907,
+      "2": 913,
+      "3": 1535
+    },
+    "unique_source_persons": 4220,
+    "by_time": [
+      {
+        "time": 0,
+        "count": 4355,
+        "mean": 3.79150401836969,
+        "std": 1.3569167853283617
+      },
+      {
+        "time": 1,
+        "count": 2092,
+        "mean": 4.226577437858508,
+        "std": 1.3292504970867214
+      },
+      {
+        "time": 2,
+        "count": 1891,
+        "mean": 4.08514013749339,
+        "std": 1.4615517661058672
+      }
+    ],
+    "score_counts": {
+      "0.0": 52,
+      "1.0": 179,
+      "2.0": 1221,
+      "3.0": 1416,
+      "4.0": 2633,
+      "5.0": 1344,
+      "6.0": 1493
+    }
+  },
+  "public_export_note": "Only aggregate input characteristics are included; patient-input hashes remain in the private execution record."
+}

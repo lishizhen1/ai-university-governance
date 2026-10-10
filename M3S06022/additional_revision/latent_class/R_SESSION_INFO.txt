@@ -1,0 +1,108 @@
+R version 4.6.1 (2026-06-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 10 x64 (build 19045)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] C
+system code page: 65001
+
+time zone: America/New_York
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] jsonlite_2.0.0 lcmm_2.2.2    
+
+loaded via a namespace (and not attached):
+ [1] numDeriv_2016.8-1.1 codetools_0.2-20    Matrix_1.7-5       
+ [4] doParallel_1.0.17   lattice_0.22-9      splines_4.6.1      
+ [7] iterators_1.0.14    marqLevAlg_2.0.8    parallel_4.6.1     
+[10] spacefillr_0.4.0    mvtnorm_1.4-2       foreach_1.5.2      
+[13] grid_4.6.1          compiler_4.6.1      tools_4.6.1        
+[16] nlme_3.1-169        Rcpp_1.1.2          survival_3.8-6     
+
+           Package      Version     
+KernSmooth "KernSmooth" "2.23-26"   
+MASS       "MASS"       "7.3-65"    
+Matrix     "Matrix"     "1.7-5"     
+Rcpp       "Rcpp"       "1.1.2"     
+base       "base"       "4.6.1"     
+boot       "boot"       "1.3-32"    
+class      "class"      "7.3-23"    
+cluster    "cluster"    "2.1.8.2"   
+codetools  "codetools"  "0.2-20"    
+compiler   "compiler"   "4.6.1"     
+datasets   "datasets"   "4.6.1"     
+doParallel "doParallel" "1.0.17"    
+foreach    "foreach"    "1.5.2"     
+foreign    "foreign"    "0.8-91"    
+grDevices  "grDevices"  "4.6.1"     
+graphics   "graphics"   "4.6.1"     
+grid       "grid"       "4.6.1"     
+iterators  "iterators"  "1.0.14"    
+jsonlite   "jsonlite"   "2.0.0"     
+lattice    "lattice"    "0.22-9"    
+lcmm       "lcmm"       "2.2.2"     
+marqLevAlg "marqLevAlg" "2.0.8"     
+methods    "methods"    "4.6.1"     
+mgcv       "mgcv"       "1.9-4"     
+mvtnorm    "mvtnorm"    "1.4-2"     
+nlme       "nlme"       "3.1-169"   
+nnet       "nnet"       "7.3-20"    
+numDeriv   "numDeriv"   "2016.8-1.1"
+parallel   "parallel"   "4.6.1"     
+rpart      "rpart"      "4.1.27"    
+spacefillr "spacefillr" "0.4.0"     
+spatial    "spatial"    "7.3-18"    
+splines    "splines"    "4.6.1"     
+stats      "stats"      "4.6.1"     
+stats4     "stats4"     "4.6.1"     
+survival   "survival"   "3.8-6"     
+tcltk      "tcltk"      "4.6.1"     
+tools      "tools"      "4.6.1"     
+utils      "utils"      "4.6.1"     
+           Built                                                          
+KernSmooth "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:32:40 UTC; windows"
+MASS       "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:23:25 UTC; windows"
+Matrix     "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:23:58 UTC; windows"
+Rcpp       "R 4.6.1; x86_64-w64-mingw32; 2026-09-29 12:14:55 UTC; windows"
+base       "R 4.6.1; ; 2026-06-24 08:20:51 UTC; windows"                  
+boot       "R 4.6.1; ; 2026-06-24 08:32:04 UTC; windows"                  
+class      "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:33:04 UTC; windows"
+cluster    "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:32:11 UTC; windows"
+codetools  "R 4.6.1; ; 2026-06-24 08:32:25 UTC; windows"                  
+compiler   "R 4.6.1; ; 2026-06-24 08:14:21 UTC; windows"                  
+datasets   "R 4.6.1; ; 2026-06-24 08:19:02 UTC; windows"                  
+doParallel "R 4.6.1; ; 2026-09-29 13:33:55 UTC; windows"                  
+foreach    "R 4.6.1; ; 2026-09-29 13:13:22 UTC; windows"                  
+foreign    "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:32:28 UTC; windows"
+grDevices  "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:16:14 UTC; windows"
+graphics   "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:16:56 UTC; windows"
+grid       "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:19:46 UTC; windows"
+iterators  "R 4.6.1; ; 2026-09-29 12:15:13 UTC; windows"                  
+jsonlite   "R 4.6.1; x86_64-w64-mingw32; 2026-09-29 12:14:52 UTC; windows"
+lattice    "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:23:40 UTC; windows"
+lcmm       "R 4.6.1; x86_64-w64-mingw32; 2026-09-29 13:55:18 UTC; windows"
+marqLevAlg "R 4.6.1; x86_64-w64-mingw32; 2026-09-29 13:34:41 UTC; windows"
+methods    "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:19:12 UTC; windows"
+mgcv       "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:33:21 UTC; windows"
+mvtnorm    "R 4.6.1; x86_64-w64-mingw32; 2026-09-29 12:14:50 UTC; windows"
+nlme       "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:30:23 UTC; windows"
+nnet       "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:33:09 UTC; windows"
+numDeriv   "R 4.6.1; ; 2026-08-19 11:46:08 UTC; windows"                  
+parallel   "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:20:30 UTC; windows"
+rpart      "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:32:48 UTC; windows"
+spacefillr "R 4.6.1; x86_64-w64-mingw32; 2026-09-29 12:16:27 UTC; windows"
+spatial    "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:33:14 UTC; windows"
+splines    "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:20:12 UTC; windows"
+stats      "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:17:23 UTC; windows"
+stats4     "R 4.6.1; ; 2026-06-24 08:20:17 UTC; windows"                  
+survival   "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:30:55 UTC; windows"
+tcltk      "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:20:20 UTC; windows"
+tools      "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:14:19 UTC; windows"
+utils      "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:15:23 UTC; windows"

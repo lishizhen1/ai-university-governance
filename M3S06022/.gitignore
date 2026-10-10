@@ -28,3 +28,21 @@ _deps/
 **/FINAL_SNAPSHOT.json
 **/provenance.json
 **/verification.json
+
+# Additional-analysis restricted outputs and local runtimes.
+*.rds
+*.RDS
+*.rda
+*.RData
+.Rhistory
+.RData
+**/private_local_only/
+**/runtime/
+**/physionet_preparation/
+**/controlled_models/
+**/fitted_class_trajectories.csv
+**/posterior_*.csv
+**/*_person_mapping.csv
+**/*_observed_long.csv
+**/*_complete_long.csv
+**/source_and_model_hashes.json

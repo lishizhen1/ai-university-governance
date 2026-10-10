@@ -1,0 +1,9 @@
+variant,k,conv,n_subjects,max_gconv,zero_iteration_loglik_abs_difference,posterior_max_abs_difference,observed_input_sequence_matches,all_selected_checkpoint_matches
+observed,1,1,10810,1.6755802789703e-07,0,0,TRUE,TRUE
+observed,2,1,10810,5.47152012586594e-09,0,0,TRUE,TRUE
+observed,3,1,10810,1.09139364212751e-09,0,0,TRUE,TRUE
+observed,4,1,10810,2.69210431724787e-10,0,0,TRUE,TRUE
+complete,1,1,6826,4.36768459621817e-07,0,0,TRUE,TRUE
+complete,2,1,6826,2.24099494516850e-09,0,0,TRUE,TRUE
+complete,3,1,6826,5.16592990607023e-10,0,0,TRUE,TRUE
+complete,4,1,6826,6.0332240536809e-08,0,0,TRUE,TRUE

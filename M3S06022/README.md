@@ -6,7 +6,7 @@ This directory is a separate medical research project within the repository main
 
 ## Version
 
-Public code export: **M3S06022-revision-v1**, 2026-10-10. Cite the full Git commit identifier and the manuscript title when referring to this code. `PUBLIC_MANIFEST.json` records SHA-256 hashes of the distributed files. A GitHub commit URL is the fixed version identifier; no archival DOI is claimed.
+Public code export: **M3S06022-revision-v2**, 2026-10-10. Cite the full Git commit identifier and the manuscript title when referring to this code. `PUBLIC_MANIFEST.json` records SHA-256 hashes of the distributed files. A GitHub commit URL is the fixed version identifier; no archival DOI is claimed.
 
 ## Start here
 
@@ -17,6 +17,10 @@ Public code export: **M3S06022-revision-v1**, 2026-10-10. Cite the full Git comm
 5. After generating the restricted prediction files locally, run `python figures/make_revision_figures.py all` to regenerate the manuscript figures.
 
 The analysis scripts write outputs beside the scripts. Work in a private local checkout or copy and do not commit generated data or model files. This export does not include raw data, processed patient records, patient predictions, trained models, fitted parameters, database passwords, or author manuscripts.
+
+## Additional analyses in v2
+
+[Additional reviewer-requested analyses](additional_revision/README.md) provide ICI/E50/E90 with conditional bootstrap intervals and a formal longitudinal latent-class sensitivity (observed values plus complete three-window cases). Source, environment, aggregate results and independent audit records are included. The original 47 public files remain; primary-model reference outputs are unchanged. Trained models and controlled-sharing preparation are excluded.
 
 ## Reference results
 

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "n_models": 8,
+  "n_full_restarts_independently_reloaded": 36,
+  "all_R_sources_parse": true,
+  "verification": "Reload all eight saved models, check exact observed SIC/id sequence, conv=1 and all convergence criteria<1e-5, and identical parameters in individual/checkpoint saves; independently recompute each likelihood and posterior at the saved parameters with maxiter=0.",
+  "execution_note": "Both long fitting processes completed all model fits, saved the all_selected checkpoint and printed ALL_FITS_COMPLETE; subsequently they exited 1 because edits to the executing source file caused stale stream offsets at end-of-file. The saved numeric fits were unaffected. The current scripts parse successfully and this independent full reload/likelihood verification exits successfully. No model fit is claimed successful solely from the interrupted process exit status.",
+  "reference_record_scope": "Reference private execution before public packaging. Current public paths/status wording differ as recorded in SOURCE_PROVENANCE.json. Private fitted model and patient-input hashes are not distributed."
+}

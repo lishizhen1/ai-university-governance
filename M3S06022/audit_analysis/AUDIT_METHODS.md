@@ -2,7 +2,9 @@
 
 This methods record also describes artifacts generated during the authorized local analysis. File names below identify generated local outputs; they are not a claim that restricted models, fitted parameters, or all output tables are distributed on GitHub. PUBLIC_MANIFEST.json lists the actual public file set.
 
-# Reviewer-requested statistical audit and replacement analysis
+# Principal reanalysis methods retained from revision v1
+
+This record describes the primary prediction and K-means analyses distributed in v1. Revision v2 additionally **completed** ICI/E50/E90 with conditional bootstrap intervals and formal Gaussian longitudinal latent-class models (K1-K4, observed-value and complete-three-window analyses). Their distinct specifications and completed results are documented in [additional_revision](../additional_revision/README.md). The formal latent-class analysis uses observed SIC without carry-forward and does not replace or validate the earlier multivariable K-means labels. Primary prediction outputs remain unchanged.
 
 This is a post-review reanalysis, not a prospectively registered analysis. All model fitting, imputation parameters, scaling, K-means centroids and logistic regularization selection use MIMIC-IV only. The eICU cohort was examined in the original analysis; therefore the revised evaluation is an external re-evaluation, not a never-inspected external test set.
 

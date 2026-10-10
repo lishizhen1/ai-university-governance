@@ -1,0 +1,389 @@
+{
+  "boundary_and_definition_tests": [
+    {
+      "test": "hand-computed empirical mean/median/90th-percentile",
+      "passed": true
+    },
+    {
+      "test": "identity calibration gives zero for all summaries",
+      "passed": true
+    },
+    {
+      "test": "constant prediction with matching prevalence",
+      "passed": true
+    },
+    {
+      "test": "single-class opposite-boundary predictions yield error one",
+      "passed": true
+    },
+    {
+      "test": "exact zero/one predictions remain finite; clipping only transforms logit",
+      "passed": true
+    },
+    {
+      "test": "tied quantile knots use predetermined numerical fallback",
+      "passed": true
+    },
+    {
+      "test": "invalid outcomes/probabilities/NaN raise instead of deleting records",
+      "passed": true
+    },
+    {
+      "test": "person-cluster resampling carries repeated stays together",
+      "passed": true
+    }
+  ],
+  "agreement_with_existing_Figure2": [
+    {
+      "cohort": "MIMIC-IV",
+      "model": "M3_continuous_SIC",
+      "stored_curve_points": 200,
+      "max_absolute_difference": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "Peak_SOFA",
+      "stored_curve_points": 200,
+      "max_absolute_difference": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "Serial_SOFA",
+      "stored_curve_points": 200,
+      "max_absolute_difference": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "Expanded_XGB",
+      "stored_curve_points": 200,
+      "max_absolute_difference": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "cohort": "eICU",
+      "model": "M3_continuous_SIC",
+      "stored_curve_points": 200,
+      "max_absolute_difference": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "cohort": "eICU",
+      "model": "Peak_SOFA",
+      "stored_curve_points": 200,
+      "max_absolute_difference": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "cohort": "eICU",
+      "model": "Serial_SOFA",
+      "stored_curve_points": 200,
+      "max_absolute_difference": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "cohort": "eICU",
+      "model": "Expanded_XGB",
+      "stored_curve_points": 200,
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "passed": true
+    }
+  ],
+  "calibrator_diagnostics": [
+    {
+      "cohort": "MIMIC-IV",
+      "model": "M1_admission_SOFA",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 22,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "M2_admission_SIC",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 29,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "M3_continuous_SIC",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 28,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "Coagulation_only_serial",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 24,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "Peak_SOFA",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 27,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "Peak_SOFA_plus_SIC",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 24,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "Serial_SOFA",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 24,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "M3_plus_K2",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 29,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "M3_plus_K4_exploratory",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 31,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "Expanded_LR",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 24,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "M3_missing_indicators",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 28,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "Expanded_XGB",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 24,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "MIMIC-IV",
+      "model": "M3_level_only",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 22,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "eICU",
+      "model": "M1_admission_SOFA",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 28,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "eICU",
+      "model": "M2_admission_SIC",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 28,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "eICU",
+      "model": "M3_continuous_SIC",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 23,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "eICU",
+      "model": "Coagulation_only_serial",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 26,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "eICU",
+      "model": "Peak_SOFA",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 26,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "eICU",
+      "model": "Peak_SOFA_plus_SIC",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 23,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "eICU",
+      "model": "Serial_SOFA",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 22,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "eICU",
+      "model": "M3_plus_K2",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 22,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "eICU",
+      "model": "M3_plus_K4_exploratory",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 27,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "eICU",
+      "model": "Expanded_LR",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 23,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "eICU",
+      "model": "M3_missing_indicators",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 28,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "eICU",
+      "model": "Expanded_XGB",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 24,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    },
+    {
+      "cohort": "eICU",
+      "model": "M3_level_only",
+      "calibrator_fit_count_including_point": 501,
+      "fit_modes": {
+        "quantile_spline": 501
+      },
+      "maximum_solver_iterations": 24,
+      "failed_fits": 0,
+      "epsilon_clipped_original_predictions": 0
+    }
+  ],
+  "original_inputs_unchanged": true,
+  "total_calibrator_fits": 13026,
+  "total_bootstrap_rows": 13000,
+  "saved_individual_predictions": false,
+  "saved_calibrator_parameters": false,
+  "elapsed_seconds": 130.38277888298035,
+  "reference_record_scope": "Original private execution; patient-input hashes retained locally and excluded from public export. Original input stability and aggregate checks are retained."
+}

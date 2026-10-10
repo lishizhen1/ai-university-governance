@@ -1,0 +1,9 @@
+{
+  "Python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "3.0.1",
+  "scikit_learn": "1.7.2",
+  "scipy": "1.16.2",
+  "thread_limit": 2,
+  "bootstrap_seed": 20261010
+}

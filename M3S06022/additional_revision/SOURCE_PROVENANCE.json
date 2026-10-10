@@ -1,0 +1,298 @@
+{
+  "public_export": "M3S06022-revision-v2",
+  "date": "2026-10-10",
+  "scope": "Explicit file allowlist; no recursive copy from the private analysis. Original frozen sources were not modified. Reference execution-audit hashes describe original local sources; PUBLIC_MANIFEST.json identifies these public portable copies.",
+  "files": [
+    {
+      "public_path": "ici_analysis.py",
+      "original_analysis_source_path": "ici_analysis.py",
+      "original_source_sha256": "eaef589c2128fc33a422e48e6a6b355ff0e7eb089cdc475b14e91a6fed673344",
+      "public_file_sha256": "75fd799f0583cab0d95243311d80a78f62437699c135a67819b78df8e47cb694",
+      "packaging_adjustments": [
+        "Locate principal analysis inputs in ../audit_analysis from the public additional_revision directory."
+      ],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "verify_ici.py",
+      "original_analysis_source_path": "verify_ici.py",
+      "original_source_sha256": "8b3c8efd689e7221622a49091a610f8d97cdd6bfcddb4500526e2e863394cf8c",
+      "public_file_sha256": "70d0a9b1cfdad24ccbb4e8fe1e7c38c471ea59e6a5ad1caea00b61ed03cf0ab1",
+      "packaging_adjustments": [
+        "Locate principal analysis inputs in ../audit_analysis."
+      ],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "ICI_METHODS.md",
+      "original_analysis_source_path": "ICI_METHODS.md",
+      "original_source_sha256": "524d6e68b84d0909eac33df0fa106bbfcaf3842f6495d77a7a4fef06cc6eb274",
+      "public_file_sha256": "524d6e68b84d0909eac33df0fa106bbfcaf3842f6495d77a7a4fef06cc6eb274",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "ici_analysis_plan.json",
+      "original_analysis_source_path": "ici_analysis_plan.json",
+      "original_source_sha256": "9f7e96b621f2eac265ae9b0f65bd6f2ddae227c2a254fad99a15b78be96c7a46",
+      "public_file_sha256": "54c21604fed6ee08164b0875c2d0902019bc3a6e9db2f654a35806aac6710b01",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "ici_environment.json",
+      "original_analysis_source_path": "ici_environment.json",
+      "original_source_sha256": "6047deeaafb3a1cffd9805a96115e7850f6203f4c01796e018e83cebc2e9bc4b",
+      "public_file_sha256": "e0f4b59e01b9c8486f8e1f8d0e198b84cc2bac9a091afba2d541f980b1540e41",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "ici_point_estimates.csv",
+      "original_analysis_source_path": "ici_point_estimates.csv",
+      "original_source_sha256": "30dda267169b85e4fc9b8336443bed24523f7eb5dcf4f8c1acd42573d13e5735",
+      "public_file_sha256": "40132284b7c33d9d4221c2708fc2eff92ceb3871f7e0b4d8f5bcaf6fdc7c1a61",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "ici_e50_e90_with_95CI.csv",
+      "original_analysis_source_path": "ici_e50_e90_with_95CI.csv",
+      "original_source_sha256": "8c955457a2733699ca6b66bb87c07fee4b76874b2a3bd3ecfc9cce031f231804",
+      "public_file_sha256": "18f01dabb7eb4c19124ac69052797a964fc26d1710d170008d982298a3520659",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "ici_e50_e90_paired_differences.csv",
+      "original_analysis_source_path": "ici_e50_e90_paired_differences.csv",
+      "original_source_sha256": "bbe43f3f3ae33f94f83787006d4f9868028ecc8b0539ad6d598dd57b9bbaf22d",
+      "public_file_sha256": "107593b8026c612363557865f52b0e3a9414a2fac26cd60ac00c397208eca993",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "ici_bootstrap_metric_replicates.csv",
+      "original_analysis_source_path": "ici_bootstrap_metric_replicates.csv",
+      "original_source_sha256": "3a2cd70bab9c22e14a5c5d6b99c67f026f51944dbf8dea03c13fb0b3cdda950c",
+      "public_file_sha256": "9d4673290a453473810add8e46e365974275f49b95918983b5035da27d8fa96d",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "ici_verification.json",
+      "original_analysis_source_path": "ici_verification.json",
+      "original_source_sha256": "0800dac84dbd39335d224bd88c7cb08eb0925901d7bcaeb9a4e275ce081d7076",
+      "public_file_sha256": "36f6e3a2de6e895b095e22f99e1d615bf76b727c56a97e95f3403bf26eb698d1",
+      "packaging_adjustments": [
+        "Keep aggregate audit results but remove private patient/model hash inventories and explicitly identify reference execution provenance where applicable."
+      ],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "ici_independent_verification.json",
+      "original_analysis_source_path": "ici_independent_verification.json",
+      "original_source_sha256": "92b4a4b29548043913ea2781a98fe194e71d9afe9576d4d9eae088f554182b06",
+      "public_file_sha256": "e6892fa9fa133aabe370c70e6eb8c503218dcb5105b29eca12e989d51f2ffbea",
+      "packaging_adjustments": [
+        "Keep aggregate audit results but remove private patient/model hash inventories and explicitly identify reference execution provenance where applicable."
+      ],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/export_latent_input.py",
+      "original_analysis_source_path": "latent_class/export_latent_input.py",
+      "original_source_sha256": "0baff847e580517d5cf85660a5e826011d5081b85219ca42dccc19a5c6bcbbf2",
+      "public_file_sha256": "2debcf6a964ec6f1b9a2289f2d8281942065006b6854a8afac7f6376381c8722",
+      "packaging_adjustments": [
+        "Import principal source from ../../audit_analysis."
+      ],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/fit_latent_trajectories.R",
+      "original_analysis_source_path": "latent_class/fit_latent_trajectories.R",
+      "original_source_sha256": "3f609b5269182dbae6bf027d7eb0547d1ebc88af14dccd45e695fa79611caac9",
+      "public_file_sha256": "3f609b5269182dbae6bf027d7eb0547d1ebc88af14dccd45e695fa79611caac9",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/summarize_latent_trajectories.R",
+      "original_analysis_source_path": "latent_class/summarize_latent_trajectories.R",
+      "original_source_sha256": "58682b5760ce43a13841766d01755da0846ad00171643c0a667597b228bdf0ab",
+      "public_file_sha256": "58682b5760ce43a13841766d01755da0846ad00171643c0a667597b228bdf0ab",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/finalize_latent_report.py",
+      "original_analysis_source_path": "latent_class/finalize_latent_report.py",
+      "original_source_sha256": "48ad9e86ab85f40e21fe83f00a140377306ef852968493e9dc28c24d39cea975",
+      "public_file_sha256": "514fda955c1fbe420e07742f87e30934fa4fe4da53fcbcbec092da98c0c34d29",
+      "packaging_adjustments": [
+        "Resolve optional local Python dependencies under ../../audit_analysis/_deps.",
+        "Replace historical pre-publication status sentence with the current public-export boundary; no result or method changed."
+      ],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/validate_saved_models.R",
+      "original_analysis_source_path": "latent_class/validate_saved_models.R",
+      "original_source_sha256": "8dffa0bbc55b4ddf720a3587f49753d8b8b5baa3a4381aa4ea0aede0c446fa59",
+      "public_file_sha256": "48ca5f6e446e0cdc18d73ae4629a6fc02b965aed62701c5b46fa11bcf354a820",
+      "packaging_adjustments": [
+        "Label the documented original-run exit-status incident as reference execution history when this script is rerun."
+      ],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/input_metadata.json",
+      "original_analysis_source_path": "latent_class/input_metadata.json",
+      "original_source_sha256": "d1d4ac0cebbb52656c837b2a41e08874625904f4704bf0df09a48e662dac3f3e",
+      "public_file_sha256": "23803e3bb94942dd4cb7a392034cf99dae9a7011b5237f32d6f3e7be30db787a",
+      "packaging_adjustments": [
+        "Keep aggregate audit results but remove private patient/model hash inventories and explicitly identify reference execution provenance where applicable."
+      ],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/latent_model_methods.json",
+      "original_analysis_source_path": "latent_class/latent_model_methods.json",
+      "original_source_sha256": "a4802387e1ee4f96cea87b8e84055d62182205c4522b03d4ff21011d7358bb34",
+      "public_file_sha256": "add24fd4cb84e7398809a43d74bff81e6c0e3184e35d6a9367d935de7d2ef95c",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/model_comparison.csv",
+      "original_analysis_source_path": "latent_class/model_comparison.csv",
+      "original_source_sha256": "e9ad01e4d90ffb359923cecb6ded5e182f2883008eb5d3e4b7c292a2351d0a2f",
+      "public_file_sha256": "9129d629e6d4831a77b35255780a125eaad734834b7f80e3fe58985aa2bc7ebe",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/model_initialization_diagnostics.csv",
+      "original_analysis_source_path": "latent_class/model_initialization_diagnostics.csv",
+      "original_source_sha256": "0da7e081ca98fbe6b9640768199948d700c0bbc38f8276a5c70adec10c17a030",
+      "public_file_sha256": "4f0cd4d25adf7b31aafb3d1ce93441f4fc5b54566eb45ea7b567537b81461054",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/classification_quality.csv",
+      "original_analysis_source_path": "latent_class/classification_quality.csv",
+      "original_source_sha256": "a9ecc59502a020f35094517456ceb76920420f7da6b56b49a82c7a2e3d6645f8",
+      "public_file_sha256": "39160c42a95793668e3225f2a133eb1f930353638538cd597492ba20a718a3af",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/class_summary.csv",
+      "original_analysis_source_path": "latent_class/class_summary.csv",
+      "original_source_sha256": "240d6b392e413fb0e425edf51f8d390ba1e490edc265c375aae3ca17dcb33dd3",
+      "public_file_sha256": "bc44593247dcd9f9851ad9f4e101904ea7e1a958d573f24c64ac0086be725399",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/complete_case/latent_model_methods.json",
+      "original_analysis_source_path": "latent_class/complete_case/latent_model_methods.json",
+      "original_source_sha256": "ca71be93715d37379cd6726978d11d72b09e2bef8af7592fffc6e36ee448d8dd",
+      "public_file_sha256": "698ae8a1b02beb207b5cfaf4f343cdf56dacec338ed3b4afa692dd18b526a3f9",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/complete_case/model_comparison.csv",
+      "original_analysis_source_path": "latent_class/complete_case/model_comparison.csv",
+      "original_source_sha256": "13dbdcc30bcb77735390f1027310761fd11a5ec715dfb20b522498cd2db40c03",
+      "public_file_sha256": "f44cb9e93d1916e3b2ad86a762548103a96d86a95bb6c73fe528af5f2c1c6028",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/complete_case/model_initialization_diagnostics.csv",
+      "original_analysis_source_path": "latent_class/complete_case/model_initialization_diagnostics.csv",
+      "original_source_sha256": "23f259cec11367f780339f5468514de3507e2027472c918a6d68003b39df0f65",
+      "public_file_sha256": "76cf494ffe492716ba31424b6be86c4f06a934295428400ea7da57a1677bfc40",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/complete_case/classification_quality.csv",
+      "original_analysis_source_path": "latent_class/complete_case/classification_quality.csv",
+      "original_source_sha256": "f36ae8c05072732f5c3d089ba91a4c84cca06a4856ad7a0b54f786ba0f606eab",
+      "public_file_sha256": "006982ce9746c4d13fc35c49a2e96bdc83a3d50d97a25e0c8717f456fb710d14",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/complete_case/class_summary.csv",
+      "original_analysis_source_path": "latent_class/complete_case/class_summary.csv",
+      "original_source_sha256": "e7c9244f73eb285e21009f2842e7e49dee47951594082ca515665332c3247a7e",
+      "public_file_sha256": "09dbeb162182cd35e3ad23b3056a2a42eeaacdcac34f5564b06861b909a00cde",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/execution_validation.json",
+      "original_analysis_source_path": "latent_class/execution_validation.json",
+      "original_source_sha256": "079f71ead2f6f3420f23a35e0c3d342a5b93ec0239c58f544d9d4521d4b6b769",
+      "public_file_sha256": "3859949cc710b9c1baf8374d43ec4277f289677f635ba910b967f0df7ec742c1",
+      "packaging_adjustments": [
+        "Keep aggregate audit results but remove private patient/model hash inventories and explicitly identify reference execution provenance where applicable."
+      ],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/saved_model_validation.csv",
+      "original_analysis_source_path": "latent_class/saved_model_validation.csv",
+      "original_source_sha256": "6df0b1d6905def53662525e13a6b9c95e5dd1e8c4e4614d5c0e4f7c578d2415f",
+      "public_file_sha256": "81daf89c155b9da03281d989f559669d7d7e8ac70b770ec806b9fc1691797909",
+      "packaging_adjustments": [
+        "Keep aggregate audit results but remove private patient/model hash inventories and explicitly identify reference execution provenance where applicable."
+      ],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/full_restart_validation.csv",
+      "original_analysis_source_path": "latent_class/full_restart_validation.csv",
+      "original_source_sha256": "15c947490181692996408a1ce1dea9e57a860b82b237ad6fe3e33337a13525ac",
+      "public_file_sha256": "393a9aa95709570a52e45b11d16bd48328523df9365c37a664487254b82583b5",
+      "packaging_adjustments": [],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/FINAL_LATENT_REPORT.json",
+      "original_analysis_source_path": "latent_class/FINAL_LATENT_REPORT.json",
+      "original_source_sha256": "fb39e245eed3ba058dea3e51137abb4c87279e3c2bd3157098b766898d9adb57",
+      "public_file_sha256": "7879a95bf3b346bd84632a1ce06f0b4b5963036d85ce0fd3b900e76359f359d7",
+      "packaging_adjustments": [
+        "Replace historical pre-publication status sentence with the current public-export boundary; no result or method changed."
+      ],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/LATENT_METHODS_RESULTS.txt",
+      "original_analysis_source_path": "latent_class/LATENT_METHODS_RESULTS.txt",
+      "original_source_sha256": "9bead9d82db3a63057aa420c737b273fdc20ab1a6ccfea08427236deaab2e8b8",
+      "public_file_sha256": "fce306d103a9b2963cdfc433f5a6dfe6d36565a8e555783f0e0f48ec8659183b",
+      "packaging_adjustments": [
+        "Replace historical pre-publication status sentence with the current public-export boundary; no result or method changed."
+      ],
+      "scientific_method_or_numeric_result_changed": false
+    },
+    {
+      "public_path": "latent_class/R_SESSION_INFO.txt",
+      "original_analysis_source_path": "latent_class/runtime/sessionInfo.txt",
+      "original_source_sha256": "7825550234adf320b50f00b2832ac9aac3843d33223329fe69a9b51e087a32d8",
+      "public_file_sha256": "d2fd3e06581403f32271094941c9215241534f8d4426cd15b54f57baaeb13b53",
+      "packaging_adjustments": [
+        "Copy environment text only to a public non-runtime path; no runtime binaries or installed packages included."
+      ],
+      "scientific_method_or_numeric_result_changed": false
+    }
+  ]
+}

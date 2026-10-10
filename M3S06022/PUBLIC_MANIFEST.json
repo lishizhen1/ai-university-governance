@@ -1,16 +1,205 @@
 {
-  "version": "M3S06022-revision-v1",
+  "version": "M3S06022-revision-v2",
   "date": "2026-10-10",
+  "hash_algorithm": "SHA-256",
+  "text_encoding": "UTF-8",
+  "line_endings": "LF",
+  "manifest_self_excluded": true,
   "files": [
     {
       "path": ".gitignore",
-      "bytes": 527,
-      "sha256": "511cadbc792d5d42157e0c74bb98236751e592a610dd923b5d9c7e8aa836717a"
+      "bytes": 869,
+      "sha256": "9d3e14f167427cf677e0d9771bfdfeb37b63ffa177e3c1a072fe8f5de91c0776"
+    },
+    {
+      "path": "additional_revision/ici_analysis.py",
+      "bytes": 15764,
+      "sha256": "75fd799f0583cab0d95243311d80a78f62437699c135a67819b78df8e47cb694"
+    },
+    {
+      "path": "additional_revision/ici_analysis_plan.json",
+      "bytes": 3892,
+      "sha256": "54c21604fed6ee08164b0875c2d0902019bc3a6e9db2f654a35806aac6710b01"
+    },
+    {
+      "path": "additional_revision/ici_bootstrap_metric_replicates.csv",
+      "bytes": 1227908,
+      "sha256": "9d4673290a453473810add8e46e365974275f49b95918983b5035da27d8fa96d"
+    },
+    {
+      "path": "additional_revision/ici_e50_e90_paired_differences.csv",
+      "bytes": 8200,
+      "sha256": "107593b8026c612363557865f52b0e3a9414a2fac26cd60ac00c397208eca993"
+    },
+    {
+      "path": "additional_revision/ici_e50_e90_with_95CI.csv",
+      "bytes": 6054,
+      "sha256": "18f01dabb7eb4c19124ac69052797a964fc26d1710d170008d982298a3520659"
+    },
+    {
+      "path": "additional_revision/ici_environment.json",
+      "bytes": 165,
+      "sha256": "e0f4b59e01b9c8486f8e1f8d0e198b84cc2bac9a091afba2d541f980b1540e41"
+    },
+    {
+      "path": "additional_revision/ici_independent_verification.json",
+      "bytes": 7094,
+      "sha256": "e6892fa9fa133aabe370c70e6eb8c503218dcb5105b29eca12e989d51f2ffbea"
+    },
+    {
+      "path": "additional_revision/ICI_METHODS.md",
+      "bytes": 6626,
+      "sha256": "524d6e68b84d0909eac33df0fa106bbfcaf3842f6495d77a7a4fef06cc6eb274"
+    },
+    {
+      "path": "additional_revision/ici_point_estimates.csv",
+      "bytes": 2663,
+      "sha256": "40132284b7c33d9d4221c2708fc2eff92ceb3871f7e0b4d8f5bcaf6fdc7c1a61"
+    },
+    {
+      "path": "additional_revision/ici_verification.json",
+      "bytes": 10568,
+      "sha256": "36f6e3a2de6e895b095e22f99e1d615bf76b727c56a97e95f3403bf26eb698d1"
+    },
+    {
+      "path": "additional_revision/INDEPENDENT_AUDIT.md",
+      "bytes": 3373,
+      "sha256": "98e9ff93195f085bf546f25ffbb1bb8ae97549fe37241b750e319fb1dee94ed4"
+    },
+    {
+      "path": "additional_revision/latent_class/class_summary.csv",
+      "bytes": 2078,
+      "sha256": "bc44593247dcd9f9851ad9f4e101904ea7e1a958d573f24c64ac0086be725399"
+    },
+    {
+      "path": "additional_revision/latent_class/classification_quality.csv",
+      "bytes": 1027,
+      "sha256": "39160c42a95793668e3225f2a133eb1f930353638538cd597492ba20a718a3af"
+    },
+    {
+      "path": "additional_revision/latent_class/complete_case/class_summary.csv",
+      "bytes": 2088,
+      "sha256": "09dbeb162182cd35e3ad23b3056a2a42eeaacdcac34f5564b06861b909a00cde"
+    },
+    {
+      "path": "additional_revision/latent_class/complete_case/classification_quality.csv",
+      "bytes": 1020,
+      "sha256": "006982ce9746c4d13fc35c49a2e96bdc83a3d50d97a25e0c8717f456fb710d14"
+    },
+    {
+      "path": "additional_revision/latent_class/complete_case/latent_model_methods.json",
+      "bytes": 2923,
+      "sha256": "698ae8a1b02beb207b5cfaf4f343cdf56dacec338ed3b4afa692dd18b526a3f9"
+    },
+    {
+      "path": "additional_revision/latent_class/complete_case/model_comparison.csv",
+      "bytes": 1311,
+      "sha256": "f44cb9e93d1916e3b2ad86a762548103a96d86a95bb6c73fe528af5f2c1c6028"
+    },
+    {
+      "path": "additional_revision/latent_class/complete_case/model_initialization_diagnostics.csv",
+      "bytes": 20256,
+      "sha256": "76cf494ffe492716ba31424b6be86c4f06a934295428400ea7da57a1677bfc40"
+    },
+    {
+      "path": "additional_revision/latent_class/execution_validation.json",
+      "bytes": 1131,
+      "sha256": "3859949cc710b9c1baf8374d43ec4277f289677f635ba910b967f0df7ec742c1"
+    },
+    {
+      "path": "additional_revision/latent_class/export_latent_input.py",
+      "bytes": 2785,
+      "sha256": "2debcf6a964ec6f1b9a2289f2d8281942065006b6854a8afac7f6376381c8722"
+    },
+    {
+      "path": "additional_revision/latent_class/FINAL_LATENT_REPORT.json",
+      "bytes": 33620,
+      "sha256": "7879a95bf3b346bd84632a1ce06f0b4b5963036d85ce0fd3b900e76359f359d7"
+    },
+    {
+      "path": "additional_revision/latent_class/finalize_latent_report.py",
+      "bytes": 6068,
+      "sha256": "514fda955c1fbe420e07742f87e30934fa4fe4da53fcbcbec092da98c0c34d29"
+    },
+    {
+      "path": "additional_revision/latent_class/fit_latent_trajectories.R",
+      "bytes": 5895,
+      "sha256": "3f609b5269182dbae6bf027d7eb0547d1ebc88af14dccd45e695fa79611caac9"
+    },
+    {
+      "path": "additional_revision/latent_class/full_restart_validation.csv",
+      "bytes": 2266,
+      "sha256": "393a9aa95709570a52e45b11d16bd48328523df9365c37a664487254b82583b5"
+    },
+    {
+      "path": "additional_revision/latent_class/input_metadata.json",
+      "bytes": 2169,
+      "sha256": "23803e3bb94942dd4cb7a392034cf99dae9a7011b5237f32d6f3e7be30db787a"
+    },
+    {
+      "path": "additional_revision/latent_class/LATENT_METHODS_RESULTS.txt",
+      "bytes": 4958,
+      "sha256": "fce306d103a9b2963cdfc433f5a6dfe6d36565a8e555783f0e0f48ec8659183b"
+    },
+    {
+      "path": "additional_revision/latent_class/latent_model_methods.json",
+      "bytes": 2957,
+      "sha256": "add24fd4cb84e7398809a43d74bff81e6c0e3184e35d6a9367d935de7d2ef95c"
+    },
+    {
+      "path": "additional_revision/latent_class/model_comparison.csv",
+      "bytes": 1312,
+      "sha256": "9129d629e6d4831a77b35255780a125eaad734834b7f80e3fe58985aa2bc7ebe"
+    },
+    {
+      "path": "additional_revision/latent_class/model_initialization_diagnostics.csv",
+      "bytes": 20228,
+      "sha256": "4f0cd4d25adf7b31aafb3d1ce93441f4fc5b54566eb45ea7b567537b81461054"
+    },
+    {
+      "path": "additional_revision/latent_class/R_SESSION_INFO.txt",
+      "bytes": 5327,
+      "sha256": "d2fd3e06581403f32271094941c9215241534f8d4426cd15b54f57baaeb13b53"
+    },
+    {
+      "path": "additional_revision/latent_class/saved_model_validation.csv",
+      "bytes": 592,
+      "sha256": "81daf89c155b9da03281d989f559669d7d7e8ac70b770ec806b9fc1691797909"
+    },
+    {
+      "path": "additional_revision/latent_class/summarize_latent_trajectories.R",
+      "bytes": 8971,
+      "sha256": "58682b5760ce43a13841766d01755da0846ad00171643c0a667597b228bdf0ab"
+    },
+    {
+      "path": "additional_revision/latent_class/validate_saved_models.R",
+      "bytes": 4190,
+      "sha256": "48ca5f6e446e0cdc18d73ae4629a6fc02b965aed62701c5b46fa11bcf354a820"
+    },
+    {
+      "path": "additional_revision/README.md",
+      "bytes": 5998,
+      "sha256": "136dc6e819020c73b0ea4099c800f10fa2a445b02a7fbd9759c553160735f3bc"
+    },
+    {
+      "path": "additional_revision/SOURCE_PROVENANCE.json",
+      "bytes": 16751,
+      "sha256": "2a5fca312c1f726ed8280b56bdd6f99ff0e85bf0e526768525abed75d1a7c499"
+    },
+    {
+      "path": "additional_revision/verify_ici.py",
+      "bytes": 4716,
+      "sha256": "70d0a9b1cfdad24ccbb4e8fe1e7c38c471ea59e6a5ad1caea00b61ed03cf0ab1"
+    },
+    {
+      "path": "additional_revision/verify_public_summaries.py",
+      "bytes": 6498,
+      "sha256": "1926206c469ba607904933a625e51758d61c01a2f90169d3c1d5b6cd3922d90f"
     },
     {
       "path": "audit_analysis/AUDIT_METHODS.md",
-      "bytes": 13070,
-      "sha256": "4f23e3ee4efbfa29a661414b59ca12bb592241880a491bf42eaafce0e4320f74"
+      "bytes": 13670,
+      "sha256": "7a65e9c892bc8cc64a4c802e2f2fd08bf9c7352ddecc65c3be250ba3211fa3e5"
     },
     {
       "path": "audit_analysis/calibration_deciles.csv",
@@ -79,8 +268,8 @@
     },
     {
       "path": "audit_analysis/REPRODUCTION_README.md",
-      "bytes": 6413,
-      "sha256": "3dce7f1a786af3a3a0d5465c5b98b421420c5dcf98ec2bd0ca215aa4e317a56a"
+      "bytes": 6922,
+      "sha256": "300b13ccb0418c794f8f8b1f9312031cccbead1e8c8ecfb83d1f581191d3c24a"
     },
     {
       "path": "audit_analysis/requirements_revision.txt",
@@ -219,13 +408,13 @@
     },
     {
       "path": "PUBLIC_EXPORT_NOTES.md",
-      "bytes": 1303,
-      "sha256": "b362bc5628657fa993bc9624757f58a5d4e67fc7421fd1bf48d9d94ef5d5302b"
+      "bytes": 2509,
+      "sha256": "bc15b2a4bf66f379a3af96ff352f2d6293e109e4eb37d505ea7b745cb4ee50de"
     },
     {
       "path": "README.md",
-      "bytes": 3484,
-      "sha256": "e2abb5647aac7a59ccbb1d1c639a048d2a26ad0b96db4e2ab29b8a8fb9629491"
+      "bytes": 3978,
+      "sha256": "c9b8bc35d51baf9d0e71f79bb2389144ac50769a63b36b1a4139485184a815ce"
     },
     {
       "path": "requirements_all.txt",

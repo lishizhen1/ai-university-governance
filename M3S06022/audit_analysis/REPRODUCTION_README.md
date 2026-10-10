@@ -4,6 +4,10 @@ The finalized analysis has 10,810 MIMIC-IV stays (2,174 hospital deaths) and 4,3
 
 The software environment was 64-bit Windows, Python 3.12.14, with package versions in `requirements_revision.txt` and `environment.json`. A seed of 42 supports repeatability; cross-platform bit-for-bit agreement is not claimed.
 
+## Revision scope
+
+The steps below reproduce the principal analysis retained from v1. Revision v2 has also completed integrated calibration error (ICI/E50/E90) and the formal longitudinal latent-class sensitivity. After finishing the principal workflow and freezing its local outputs, follow [the additional-analysis workflow](../additional_revision/README.md). These additions have their own methods, environment records, aggregate reference tables and verification; they are not unimplemented suggestions.
+
 ## Installation and data layout
 
 Create a local virtual environment and install the pinned requirements with `python -m pip install -r requirements_revision.txt`. No global installation is required. The analysis optionally prepends a local `_deps` directory if present. No `_deps`, virtual environment, database, or installed library is included in this public export.
