@@ -1,0 +1,82 @@
+{
+  "cohort_mimic": {
+    "source": 29308,
+    "early_total": 17221,
+    "early_ICU_death": 1353,
+    "early_ICU_discharge_alive": 15868,
+    "ICU_still_present_but_recorded_hospital_death_before72": 54,
+    "subsequent_exclusion_hospital_discharge_by72": 33,
+    "subsequent_exclusion_dateonly_death_before_landmark_date": 1,
+    "landmark_before_W1_filter": 11899,
+    "missing_W1_SIC": 1089,
+    "included": 10810,
+    "hospital_death": 2174,
+    "ICU_death": 1538,
+    "death_by_day28_from_ICU_admission": 2465,
+    "legacy_ID_set_identical": false,
+    "legacy_outcome_identical": false,
+    "postlandmark_hospital_observation_days": {
+      "min": 0.0004050925925924709,
+      "q1": 4.244516782407407,
+      "median": 8.714670138888888,
+      "q3": 16.65191261574074,
+      "max": 318.5027777777778
+    },
+    "hospital_event_rate_pct": 20.11100832562442,
+    "duplicate_persons": 0,
+    "subsequent_exclusion_infection_pair_not_known_by72": 100
+  },
+  "cohort_eicu": {
+    "adult_first_ICU_stays": 157883,
+    "text_sepsis": 25321,
+    "early_total": 15797,
+    "early_ICU_death": 1790,
+    "early_ICU_discharge_alive": 14007,
+    "subsequent_exclusion_hospital_discharge_by72": 8,
+    "landmark_before_W1_filter": 9516,
+    "missing_W1_SIC": 5107,
+    "included": 4355,
+    "hospital_death": 979,
+    "ICU_death": 597,
+    "legacy_ID_set_identical": false,
+    "Sepsis3_eligible_total": 149,
+    "Sepsis3_landmark_W1_eligible": 67,
+    "postlandmark_hospital_observation_days": {
+      "min": 0.001388888888889106,
+      "q1": 4.05486111111111,
+      "median": 7.915972222222225,
+      "q3": 14.151736111111111,
+      "max": 342.79375
+    },
+    "hospital_event_rate_pct": 22.479908151549942,
+    "duplicate_persons": 135,
+    "text_sepsis_alltime_historical": 25925,
+    "W1_eligible_before_known_hospital_outcome_filter": 4409,
+    "subsequent_exclusion_unknown_hospital_outcome": 54,
+    "boundary_text_eligible_count": 4355,
+    "APACHE_text_eligible_count": 3058
+  },
+  "harmonization": {
+    "mimic": {
+      "INR_exact1_2_each_window": [
+        1617,
+        1478,
+        1492
+      ],
+      "patients_any_INR_exact1_2": 3509
+    },
+    "eicu": {
+      "INR_exact1_2_each_window": [
+        454,
+        156,
+        169
+      ],
+      "patients_any_INR_exact1_2": 684
+    }
+  },
+  "endpoint_definitions": {
+    "primary": "Hospital death during index hospitalization after 72-hour landmark; variable horizon until hospital discharge; no fixed 28-day horizon.",
+    "MIMIC_28day": "Retained historic flag uses COALESCE(hospital_deathtime,date_of_death) <= ICU_intime +28days; from day3 landmark to day28 is 25 remaining days, not 28 post-landmark days.",
+    "eICU": "Hospital/unit status Expired; no post-discharge all-cause death follow-up. hospital_los_days stored in derived file is hospitaldischargeoffset/1440, measured from ICU admission, not total hospital stay."
+  }
+}

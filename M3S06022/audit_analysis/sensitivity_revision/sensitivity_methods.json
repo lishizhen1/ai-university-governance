@@ -1,0 +1,59 @@
+{
+  "status": "Post hoc reviewer-requested sensitivity analyses",
+  "main_cohort_n": {
+    "MIMIC-IV": 10810,
+    "eICU": 4355
+  },
+  "observed_all3SIC_n": {
+    "MIMIC-IV": 6826,
+    "eICU": 1535
+  },
+  "complete_case": "SIC must be observed in W1,W2,W3 before any imputation. The complete-case-trained M3 is compared with full-cohort-trained carry-forward M3 only on the same complete evaluation cases. With complete SIC, carry-forward leaves the M3 predictors unchanged; this comparison concerns selection/training sensitivity, not an isolated imputation effect.",
+  "iterative": "Single deterministic Bayesian-ridge IterativeImputer on standardised predictor-only raw SIC/laboratory/SOFA windows plus age/sex; max_iter20,tol0.01,random_state42,sample_posteriorFalse. Missing SIC constrained to0–6; fractional imputed SIC retained. SIC summaries recomputed after imputation. Standardisation/imputation/classifier tuning fit independently within every inner/outer training fold. No outcome in imputation; no multiple-imputation or pooling claim.",
+  "iterative_predictors": [
+    "anchor_age",
+    "gender_numeric",
+    "w1_sic_total_score",
+    "w2_sic_total_score",
+    "w3_sic_total_score",
+    "w1_platelet_min",
+    "w2_platelet_min",
+    "w3_platelet_min",
+    "w1_inr_max",
+    "w2_inr_max",
+    "w3_inr_max",
+    "w1_bilirubin_total_max",
+    "w2_bilirubin_total_max",
+    "w3_bilirubin_total_max",
+    "w1_creatinine_max",
+    "w2_creatinine_max",
+    "w3_creatinine_max",
+    "w1_lactate_max",
+    "w2_lactate_max",
+    "w3_lactate_max",
+    "w1_sofa_total_assuming_missing_normal",
+    "w2_sofa_total_assuming_missing_normal",
+    "w3_sofa_total_assuming_missing_normal"
+  ],
+  "propensity_covariates": [
+    "anchor_age",
+    "gender_numeric",
+    "w1_sofa_total_assuming_missing_normal",
+    "w1_sic_total_score",
+    "w1_platelet_min",
+    "w1_inr_max",
+    "w1_bilirubin_total_max",
+    "w1_creatinine_max",
+    "w1_lactate_max"
+  ],
+  "IPW": "R=all three raw SIC windows observed. Logistic(C1) propensity model uses baseline-only covariates, median imputation with missingness indicators and scaling inside each fitting fold. Outcome M3 fit only R1 with stabilised weights Pr(R1 in training)/Pr(R1|baseline), cap10; propensity probabilities clipped0.001–0.999. Both propensity and outcome model refit in each inner/outer fold. Inner outcome C chosen by weighted log loss among complete heldout cases. Evaluation uses heldout-fold propensity weights; external observation-propensity models fitted using5 person-group folds in eICU, no external mortality in propensity. This exploratory target-population reweighting depends on baseline-conditional exchangeability and positivity, does not correct missing-not-at-random processes unconditionally, and is not untouched external validation of the observation model.",
+  "bootstrap": "500 paired percentile replicates using fixed predictions/weights; MIMIC patient rows and eICU uniquepid clusters. CIs conditional on models, imputations and estimated weights, without pipeline-refitting or hospital-cluster uncertainty.",
+  "outcome_sensitivity": "External hospital OR unit death uses frozen original predictions; primary remains original hospital discharge death status. Only point estimates for this explicitly secondary check.",
+  "complete_case_weights_effective_n": {
+    "MIMIC-IV": 6347.511811322739,
+    "eICU": 1116.903167422099
+  },
+  "external_refresh": "Excluded records without recorded Alive/Expired hospital discharge status; derivation models unchanged, external observation-propensity fits and conditional bootstrap intervals refreshed on final eligible cohort.",
+  "iterative_interpretation": "Auxiliary SOFA/laboratory variables contribute to imputed SIC values. Improved discrimination cannot be attributed solely to a better missingness assumption or coagulation-specific information.",
+  "IPW_interpretation": "Reweights later-window complete measurement within the W1-available landmark cohort. It cannot recover patients excluded because W1 SIC was unavailable or correct nonignorable measurement processes without assumptions."
+}

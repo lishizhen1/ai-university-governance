@@ -1,0 +1,13 @@
+{
+  "Python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "3.0.1",
+  "scikit_learn": "1.7.2",
+  "scipy": "1.16.2",
+  "xgboost": "3.1.1",
+  "random_seed": 42,
+  "bootstrap_replicates": 1000,
+  "internal_validation": "5 outer x3 inner stratified CV; inner C selection by log-loss; fixed feature sets; all fitted preprocessing inside inner/outer training data",
+  "CI_limitation": "percentile bootstrap of fixed cross-fitted/frozen predictions; MIMIC person-level, eICU person-cluster resampling; intervals do not include pipeline refitting variability or eICU between-hospital sampling variability",
+  "new_analysis": "Reviewer-requested post hoc reanalysis, external cohort previously examined; no external tuning."
+}

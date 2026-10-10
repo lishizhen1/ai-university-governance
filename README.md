@@ -29,3 +29,7 @@ Open Stata in a working directory containing `data.csv` and `analysis.do`, then 
 ## Citation
 
 Please cite the associated manuscript when using these materials. The repository is maintained for peer review and research transparency.
+
+## Separate medical research project
+
+The [M3S06022 directory](M3S06022/README.md) contains code and reproducibility documentation for *Dynamic Sepsis-Induced Coagulopathy Measures for Post-72-Hour Mortality Prediction and External Evaluation*. It is a separate project from the university-governance study above. Clinical data and trained models are not publicly redistributed in that directory.

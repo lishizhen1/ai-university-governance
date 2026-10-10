@@ -1,0 +1,236 @@
+{
+  "version": "M3S06022-revision-v1",
+  "date": "2026-10-10",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 527,
+      "sha256": "511cadbc792d5d42157e0c74bb98236751e592a610dd923b5d9c7e8aa836717a"
+    },
+    {
+      "path": "audit_analysis/AUDIT_METHODS.md",
+      "bytes": 13070,
+      "sha256": "4f23e3ee4efbfa29a661414b59ca12bb592241880a491bf42eaafce0e4320f74"
+    },
+    {
+      "path": "audit_analysis/calibration_deciles.csv",
+      "bytes": 27304,
+      "sha256": "1db64f7b0b8e8140c25f465f31d2a55f62327765e811414254f37a7bacfd7dc9"
+    },
+    {
+      "path": "audit_analysis/cohort_audit.json",
+      "bytes": 2894,
+      "sha256": "3ccc94a3d17aee1a65b5972112586c7903b8e41ac9542d3f5f7c56a2d0e8521d"
+    },
+    {
+      "path": "audit_analysis/environment.json",
+      "bytes": 715,
+      "sha256": "13e43ab64772ca8ec46bc3fefb169af914b6ec1ff4cb16ab79004cba834fc103"
+    },
+    {
+      "path": "audit_analysis/external_APACHE_subset.csv",
+      "bytes": 2653,
+      "sha256": "89cf40ff192bf04a3ee71b37357fb279c320db2bb01252ad849dd9830462de7a"
+    },
+    {
+      "path": "audit_analysis/external_recalibration.csv",
+      "bytes": 1557,
+      "sha256": "f9089f4b80ce968d15bf118a712e51d94059f98b159ba56e7fce0547f6295353"
+    },
+    {
+      "path": "audit_analysis/feature_dictionary.csv",
+      "bytes": 6751,
+      "sha256": "c949424df51d58fec320337d1318d17d61d3c7a2d38ef33c089b3643cee00834"
+    },
+    {
+      "path": "audit_analysis/feature_sets.json",
+      "bytes": 8166,
+      "sha256": "6a5de78a72a6350b1173ce7d7d7c0a7c84b717b0bce1483efa9a2ddb7a5b325f"
+    },
+    {
+      "path": "audit_analysis/freeze_snapshot.py",
+      "bytes": 3026,
+      "sha256": "f5fe79c90933292dd3ab09c7da171a93c806881726de4cd36c83d097968845a9"
+    },
+    {
+      "path": "audit_analysis/missingness_before_carry_forward.csv",
+      "bytes": 4004,
+      "sha256": "bbefbb9c28300d8280a9402c61fb61329d4b5f69bfa783a25e4b01d4fdd7309b"
+    },
+    {
+      "path": "audit_analysis/paired_differences_with_95CI.csv",
+      "bytes": 7780,
+      "sha256": "42e2a3a5be39e4cb5a3d105f041ab58be3bea4ba5eb1ecf389cbe980d4cdcd78"
+    },
+    {
+      "path": "audit_analysis/performance_point_estimates.csv",
+      "bytes": 3991,
+      "sha256": "d5eadd314bd1a40242a2f673afd8c96fe1c5804ae0b5e484a6c84cf9cc21f24e"
+    },
+    {
+      "path": "audit_analysis/performance_with_95CI.csv",
+      "bytes": 10195,
+      "sha256": "dddb9dcd932186a2be27b1e081bc56b30c54f8ba4d3cdd84ee40217bafae37f1"
+    },
+    {
+      "path": "audit_analysis/refresh_external.py",
+      "bytes": 2076,
+      "sha256": "06967129792c59e2a35623eb457cf7384956136b74f643cd0eba53bd1027dbdb"
+    },
+    {
+      "path": "audit_analysis/REPRODUCTION_README.md",
+      "bytes": 6413,
+      "sha256": "3dce7f1a786af3a3a0d5465c5b98b421420c5dcf98ec2bd0ca215aa4e317a56a"
+    },
+    {
+      "path": "audit_analysis/requirements_revision.txt",
+      "bytes": 111,
+      "sha256": "962065f30468128732ed9ed65415f1e0977111e728f0fab286a66ed800c9f81d"
+    },
+    {
+      "path": "audit_analysis/revision_analysis.py",
+      "bytes": 25488,
+      "sha256": "127ceb16ffbc697d6287f4102b98fc3719104e7587eb08ff5e3cf6ea2fdb627f"
+    },
+    {
+      "path": "audit_analysis/sensitivity_revision/external_composite_outcome_sensitivity.csv",
+      "bytes": 696,
+      "sha256": "0bc757fb44871de7a8a7b9eadee49fd3ba8921e711c48ab844fe2789f583901d"
+    },
+    {
+      "path": "audit_analysis/sensitivity_revision/sensitivity_methods.json",
+      "bytes": 4122,
+      "sha256": "3d62ccc17f7605bef77c7d4d86a018605397476122bbb21744e2643bffe75cbc"
+    },
+    {
+      "path": "audit_analysis/sensitivity_revision/sensitivity_methods.txt",
+      "bytes": 3872,
+      "sha256": "7a4a8f88f0ef06a2ba9e2a2a003b46f337249dea3b7474fd12de9ecc2e170879"
+    },
+    {
+      "path": "audit_analysis/sensitivity_revision/sensitivity_paired_differences_with_95CI.csv",
+      "bytes": 4715,
+      "sha256": "de09ebe7d8b260694d1daba42155c86e4a777943d3dbfdbf4f388d33713a836b"
+    },
+    {
+      "path": "audit_analysis/sensitivity_revision/sensitivity_performance_with_95CI.csv",
+      "bytes": 8232,
+      "sha256": "381d2425cd291a53bca6dffc48007cbef87e2f8ac361b62d96b79f8c9467fac7"
+    },
+    {
+      "path": "audit_analysis/sensitivity_revision.py",
+      "bytes": 22865,
+      "sha256": "f890e0e615e0738df9343671974a2f90e7dddec12afd399eec4aea8a1a059b66"
+    },
+    {
+      "path": "audit_analysis/source_definitions/02_可复现代码/01_数据预处理/process_sic_trajectory_data.py",
+      "bytes": 48107,
+      "sha256": "d1edb1a029e5d162550813705f0b2e6e8a7115e87eead04f8460b0da7db25d6d"
+    },
+    {
+      "path": "audit_analysis/source_definitions/02_可复现代码/02_SOFA_SIC派生/derive_full_sofa_sepsis3_eicu.py",
+      "bytes": 33501,
+      "sha256": "224592b78e9f8cc834841f9b1b97c423277302cabae1ac07270bda40c7b859d4"
+    },
+    {
+      "path": "audit_analysis/source_definitions/02_可复现代码/02_SOFA_SIC派生/derive_full_sofa_sepsis3_mimiciv.py",
+      "bytes": 40726,
+      "sha256": "b05a5eec4878688829ca6f2c1079cf09793fa38b7bb8fa01efd215314f48dc63"
+    },
+    {
+      "path": "audit_analysis/source_definitions/02_可复现代码/02_SOFA_SIC派生/derive_full_sofa_sicdb.py",
+      "bytes": 26564,
+      "sha256": "f316fca5bd7b874fb531b55a830679b16f9097fc0b6ce6281be96afe860cc7bc"
+    },
+    {
+      "path": "audit_analysis/source_definitions/02_可复现代码/03_轨迹聚类与预测模型/run_sic_trajectory_analysis.py",
+      "bytes": 41682,
+      "sha256": "994c06feeb467c5f4dc02d2ed14b3d62380740e5a5097cbe3807d69c50c6dddf"
+    },
+    {
+      "path": "audit_analysis/source_definitions/02_可复现代码/04_外部验证/run_eicu_full_external_validation.py",
+      "bytes": 10355,
+      "sha256": "2b466f418a549b74e2db19485a0fe58e078739c727e9e1f5a207eb67c248dc4c"
+    },
+    {
+      "path": "audit_analysis/source_definitions/02_可复现代码/05_补充分析/run_sensitivity_subgroup_analysis.py",
+      "bytes": 30894,
+      "sha256": "241bd4d60a9cea913ced5219fa897f73b76144a7c92ee9747ab0370a67b5b495"
+    },
+    {
+      "path": "audit_analysis/source_definitions/02_可复现代码/05_补充分析/run_supplementary_analysis.py",
+      "bytes": 26147,
+      "sha256": "68603d15366c3e7e051fe30eea087de545fcb3e89f8e83a9bfc7fc71bb89045f"
+    },
+    {
+      "path": "audit_analysis/source_definitions/02_可复现代码/config.py",
+      "bytes": 4117,
+      "sha256": "f784322191f980664e8815d5a1409bd4f2a341545d6bef976975289da50055d7"
+    },
+    {
+      "path": "audit_analysis/source_definitions/02_可复现代码/README.md",
+      "bytes": 5485,
+      "sha256": "c43d4ef42e75a9959b0f881bf9fa8ab130ed055487f5e24324b3115d7fc80550"
+    },
+    {
+      "path": "audit_analysis/source_definitions/02_可复现代码/requirements.txt",
+      "bytes": 272,
+      "sha256": "7113d1554ed969d8b3b1816aaa4070626098f411e37af7054bdcf15a07d3662b"
+    },
+    {
+      "path": "audit_analysis/source_definitions/02_可复现代码/setup_env.bat",
+      "bytes": 1995,
+      "sha256": "1568d42cbb768f691e71d293cdd5eb262a70964c39e1225e6f464bca471d6b2b"
+    },
+    {
+      "path": "audit_analysis/source_definitions/02_可复现代码/setup_env.sh",
+      "bytes": 1629,
+      "sha256": "40b26d173c447f4df9d23badbae26493929be84e38c73f788b91c8add2d48344"
+    },
+    {
+      "path": "audit_analysis/source_derivation_limitations.txt",
+      "bytes": 1363,
+      "sha256": "1a2e584beb19dd25473bd0562057d8ee2b38e734254f056c5748045cc38e5472"
+    },
+    {
+      "path": "audit_analysis/supplemental_audit.py",
+      "bytes": 15185,
+      "sha256": "96fa765eb1f96b64222a2a218305030b1840638d2264783d0c54079060d079c8"
+    },
+    {
+      "path": "audit_analysis/tuning.csv",
+      "bytes": 1926,
+      "sha256": "16d116a7eecf576eebc4fedbe077b91a02372225f12abbe9d1a4925ed3381dd6"
+    },
+    {
+      "path": "audit_analysis/verify_revision.py",
+      "bytes": 2912,
+      "sha256": "b11a3ac8467590445f030023b6ad8d60d8774b524d8d49150890f1b0d388af49"
+    },
+    {
+      "path": "DATA_ACCESS.md",
+      "bytes": 1406,
+      "sha256": "5bf9afbc3daf1d1eb983f775f235d7cf814042bd25222139e729e7b788ebf726"
+    },
+    {
+      "path": "figures/make_revision_figures.py",
+      "bytes": 18459,
+      "sha256": "47c6fa1c26396756eb22952556f3f23e1aa9f084bedbcb2dc04596ce768ade63"
+    },
+    {
+      "path": "PUBLIC_EXPORT_NOTES.md",
+      "bytes": 1303,
+      "sha256": "b362bc5628657fa993bc9624757f58a5d4e67fc7421fd1bf48d9d94ef5d5302b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3484,
+      "sha256": "e2abb5647aac7a59ccbb1d1c639a048d2a26ad0b96db4e2ab29b8a8fb9629491"
+    },
+    {
+      "path": "requirements_all.txt",
+      "bytes": 147,
+      "sha256": "2cdea1e28c7d09051bfe98d428b7fe163f70eb3574ac19a44e4207afb91c20af"
+    }
+  ]
+}

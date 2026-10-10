@@ -1,0 +1,68 @@
+feature,unit,window,models
+anchor_age,years (MIMIC anchor_age; eICU >89 coded90),summary over0–72h or baseline,M1_admission_SOFA; M2_admission_SIC; M3_continuous_SIC; Coagulation_only_serial; Peak_SOFA; Peak_SOFA_plus_SIC; Serial_SOFA; M3_plus_K2; M3_plus_K4_exploratory; Expanded_LR; M3_missing_indicators; Expanded_XGB; M3_level_only
+gender_numeric,"1 male,0 otherwise as recorded",summary over0–72h or baseline,M1_admission_SOFA; M2_admission_SIC; M3_continuous_SIC; Coagulation_only_serial; Peak_SOFA; Peak_SOFA_plus_SIC; Serial_SOFA; M3_plus_K2; M3_plus_K4_exploratory; Expanded_LR; M3_missing_indicators; Expanded_XGB; M3_level_only
+sic_max_3w,dimensionless score,summary over0–72h or baseline,M3_continuous_SIC; Peak_SOFA_plus_SIC; M3_plus_K2; M3_plus_K4_exploratory; Expanded_LR; M3_missing_indicators; Expanded_XGB; M3_level_only
+sic_mean_3w,dimensionless score,summary over0–72h or baseline,M3_continuous_SIC; Peak_SOFA_plus_SIC; M3_plus_K2; M3_plus_K4_exploratory; Expanded_LR; M3_missing_indicators; Expanded_XGB; M3_level_only
+sic_min_3w,dimensionless score,summary over0–72h or baseline,M3_continuous_SIC; Peak_SOFA_plus_SIC; M3_plus_K2; M3_plus_K4_exploratory; Expanded_LR; M3_missing_indicators; Expanded_XGB; M3_level_only
+sic_slope,SIC points per24h; (W3−W1)/2,summary over0–72h or baseline,M3_continuous_SIC; Peak_SOFA_plus_SIC; M3_plus_K2; M3_plus_K4_exploratory; Expanded_LR; M3_missing_indicators; Expanded_XGB
+sofa_peak,dimensionless score,summary over0–72h or baseline,Peak_SOFA; Peak_SOFA_plus_SIC
+w1_bilirubin_total_max,mg/dL,0<=hours<24,Expanded_LR; Expanded_XGB
+w1_creatinine_max,mg/dL,0<=hours<24,Expanded_LR; Expanded_XGB
+w1_inr_max,ratio,0<=hours<24,Coagulation_only_serial; Expanded_LR; Expanded_XGB
+w1_inr_max_missing,"1 unobserved before carry-forward,0 observed",0<=hours<24,M3_missing_indicators
+w1_lactate_max,mmol/L,0<=hours<24,Expanded_LR; Expanded_XGB
+w1_platelet_min,10^9/L,0<=hours<24,Coagulation_only_serial; Expanded_LR; Expanded_XGB
+w1_platelet_min_missing,"1 unobserved before carry-forward,0 observed",0<=hours<24,M3_missing_indicators
+w1_sic_inr_component,dimensionless score,0<=hours<24,Expanded_LR; Expanded_XGB
+w1_sic_organ_sofa_component,dimensionless score,0<=hours<24,Expanded_LR; Expanded_XGB
+w1_sic_platelet_component,dimensionless score,0<=hours<24,Expanded_LR; Expanded_XGB
+w1_sic_total_score,dimensionless score,0<=hours<24,M2_admission_SIC; M3_continuous_SIC; Peak_SOFA_plus_SIC; M3_plus_K2; M3_plus_K4_exploratory; Expanded_LR; M3_missing_indicators; Expanded_XGB; M3_level_only
+w1_sic_total_score_missing,"1 unobserved before carry-forward,0 observed",0<=hours<24,M3_missing_indicators
+w1_sofa_4systems_for_sic,dimensionless score,0<=hours<24,Expanded_LR; Expanded_XGB
+w1_sofa_cardiovascular,dimensionless score,0<=hours<24,Expanded_LR; Expanded_XGB
+w1_sofa_cns,dimensionless score,0<=hours<24,Expanded_LR; Expanded_XGB
+w1_sofa_coagulation,dimensionless score,0<=hours<24,Expanded_LR; Expanded_XGB
+w1_sofa_liver,dimensionless score,0<=hours<24,Expanded_LR; Expanded_XGB
+w1_sofa_renal,dimensionless score,0<=hours<24,Expanded_LR; Expanded_XGB
+w1_sofa_respiration,dimensionless score,0<=hours<24,Expanded_LR; Expanded_XGB
+w1_sofa_total_assuming_missing_normal,dimensionless score,0<=hours<24,M1_admission_SOFA; M2_admission_SIC; M3_continuous_SIC; Serial_SOFA; M3_plus_K2; M3_plus_K4_exploratory; Expanded_LR; M3_missing_indicators; Expanded_XGB; M3_level_only
+w2_bilirubin_total_max,mg/dL,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_creatinine_max,mg/dL,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_inr_max,ratio,24<=hours<48,Coagulation_only_serial; Expanded_LR; Expanded_XGB
+w2_inr_max_missing,"1 unobserved before carry-forward,0 observed",24<=hours<48,M3_missing_indicators
+w2_lactate_max,mmol/L,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_platelet_min,10^9/L,24<=hours<48,Coagulation_only_serial; Expanded_LR; Expanded_XGB
+w2_platelet_min_missing,"1 unobserved before carry-forward,0 observed",24<=hours<48,M3_missing_indicators
+w2_sic_inr_component,dimensionless score,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_sic_organ_sofa_component,dimensionless score,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_sic_platelet_component,dimensionless score,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_sic_total_score,dimensionless score,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_sic_total_score_missing,"1 unobserved before carry-forward,0 observed",24<=hours<48,M3_missing_indicators
+w2_sofa_4systems_for_sic,dimensionless score,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_sofa_cardiovascular,dimensionless score,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_sofa_cns,dimensionless score,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_sofa_coagulation,dimensionless score,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_sofa_liver,dimensionless score,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_sofa_renal,dimensionless score,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_sofa_respiration,dimensionless score,24<=hours<48,Expanded_LR; Expanded_XGB
+w2_sofa_total_assuming_missing_normal,dimensionless score,24<=hours<48,Serial_SOFA; Expanded_LR; Expanded_XGB
+w3_bilirubin_total_max,mg/dL,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_creatinine_max,mg/dL,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_inr_max,ratio,48<=hours<72,Coagulation_only_serial; Expanded_LR; Expanded_XGB
+w3_inr_max_missing,"1 unobserved before carry-forward,0 observed",48<=hours<72,M3_missing_indicators
+w3_lactate_max,mmol/L,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_platelet_min,10^9/L,48<=hours<72,Coagulation_only_serial; Expanded_LR; Expanded_XGB
+w3_platelet_min_missing,"1 unobserved before carry-forward,0 observed",48<=hours<72,M3_missing_indicators
+w3_sic_inr_component,dimensionless score,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_sic_organ_sofa_component,dimensionless score,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_sic_platelet_component,dimensionless score,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_sic_total_score,dimensionless score,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_sic_total_score_missing,"1 unobserved before carry-forward,0 observed",48<=hours<72,M3_missing_indicators
+w3_sofa_4systems_for_sic,dimensionless score,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_sofa_cardiovascular,dimensionless score,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_sofa_cns,dimensionless score,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_sofa_coagulation,dimensionless score,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_sofa_liver,dimensionless score,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_sofa_renal,dimensionless score,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_sofa_respiration,dimensionless score,48<=hours<72,Expanded_LR; Expanded_XGB
+w3_sofa_total_assuming_missing_normal,dimensionless score,48<=hours<72,Serial_SOFA; Expanded_LR; Expanded_XGB
